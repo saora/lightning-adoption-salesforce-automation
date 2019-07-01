@@ -1,4 +1,4 @@
-package com.serenitybdd.examples.tests;
+package com.serenitybdd.examples.tests.base;
 
 import com.serenitybdd.examples.steps.LoginSteps;
 import net.serenitybdd.junit.runners.SerenityRunner;

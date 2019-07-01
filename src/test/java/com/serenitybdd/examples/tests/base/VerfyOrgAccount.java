@@ -10,7 +10,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 @RunWith(SerenityRunner.class)
-public class OpenEmail{
+public class VerfyOrgAccount {
 
     @Managed(driver="chrome")
     WebDriverFacade chromeDriver;
@@ -30,5 +30,7 @@ public class OpenEmail{
 
 
     }
+
+
 
 }

@@ -11,7 +11,7 @@ import org.openqa.selenium.support.FindBy;
 
 import java.util.List;
 
-public class OrgSignUp extends PageObject {
+public class SignUpScreen extends PageObject {
     @FindBy(id = "first_name")
     private static WebElementFacade fill_FirtName;
 
@@ -41,46 +41,47 @@ public class OrgSignUp extends PageObject {
     @FindBy(id = "submit_btn")
     private static WebElementFacade submit_info;
 
-    private Object WebDriverFacade;
+    //private Object WebDriverFacade;
 
-    public OrgSignUp(WebDriver driver) {
+    public SignUpScreen(WebDriver driver) {
         super(driver);
     }
 
-    private void setFill_FirtName(String userFName){
+    public void setFill_FirtName(String userFName){
         fill_FirtName.clear();
         fill_FirtName.sendKeys(userFName);
     }
 
-    private void setFill_LastName(String userLName){
+    public void setFill_LastName(String userLName){
         fill_LastName.clear();
         fill_LastName.sendKeys(userLName);
     }
 
-    private void setFill_userEmail(String userEmail){
+    public void setFill_userEmail(String userEmail){
         fill_userEmail.clear();
         fill_userEmail.sendKeys(userEmail);
     }
 
-    private void setSel_JobRole(String sjobRole){
+    public void setSel_JobRole(String sjobRole){
+
         sel_JobRole.selectByVisibleText(String.valueOf(sjobRole));
     }
 
-    private void setFill_Company(String companyName){
+    public void setFill_Company(String companyName){
         fill_Company.clear();
         fill_Company.sendKeys(companyName);
     }
 
-    private void setSel_Country(String sCountry){
+    public void setSel_Country(String sCountry){
         sel_Country.selectByVisibleText(String.valueOf(sCountry));
     }
 
-    private void setFill_PostalCode(String postalCode){
+    public void setFill_PostalCode(String postalCode){
         fill_PostalCode.clear();
         fill_PostalCode.sendKeys(postalCode);
     }
 
-    private void setFill_UserName(String userName){
+    public void setFill_UserName(String userName){
         fill_UserName.clear();
         fill_UserName.sendKeys(userName);
     }
@@ -97,6 +98,7 @@ public class OrgSignUp extends PageObject {
     public void setSubmit(){
         submit_info.click();
     }
+
 
     public void fillOrgInformation(String userFName, String userLName, String userEmail, String sjobRole, String companyName, String sCountry, String postalCode, String userName) {
         setFill_FirtName(userFName);

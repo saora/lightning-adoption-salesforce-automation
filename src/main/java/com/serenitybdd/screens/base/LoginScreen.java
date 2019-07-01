@@ -1,4 +1,4 @@
-package com.serenitybdd.examples.screens;
+package com.serenitybdd.screens.base;
 
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.pages.PageObject;
@@ -17,7 +17,6 @@ public class LoginScreen extends PageObject {
     private static WebElementFacade SIGN_IN;
 
     public LoginScreen(WebDriver driver) {
-
         super(driver);
     }
 
@@ -33,7 +32,6 @@ public class LoginScreen extends PageObject {
 
 
     private void clickSignIn() {
-
         SIGN_IN.click();
     }
 

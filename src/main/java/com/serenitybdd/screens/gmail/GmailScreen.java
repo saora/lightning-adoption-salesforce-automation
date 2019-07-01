@@ -1,4 +1,4 @@
-package com.serenitybdd.screens.base;
+package com.serenitybdd.screens.gmail;
 
 import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.PageObject;
