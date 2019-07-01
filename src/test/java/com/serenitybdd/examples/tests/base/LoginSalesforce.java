@@ -7,35 +7,35 @@ import net.thucydides.core.annotations.Steps;
 import net.thucydides.core.webdriver.WebDriverFacade;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 @RunWith(SerenityRunner.class)
-public class LoginIT {
-
-    /*@Managed(driver="chrome")
-    WebDriverFacade chromeDriver;
-
+public class LoginSalesforce {
+/*
     @Managed(driver="iexplorer")
     WebDriverFacade ieDriver;
 
     @Managed(driver="edge")
     WebDriverFacade edgeDriver;*/
 
+//@Managed
+   //WebDriverFacade driver; // defaults to firefox geckodriver*/
+    @Managed(driver="chrome")
+    WebDriverFacade chromeDriver;
 
-    @Managed
-    WebDriverFacade driver; // defaults to firefox geckodriver
 
     @Steps
-    LoginSteps carla;
+    LoginSteps SalesforceUser;
+
 
     @Test
     public void checkUserSuccessfullyLogin(){
         // Given
-        carla.IsARegisteredMember();
-
+        SalesforceUser.IsARegisteredMember();
         // When
-        carla.signInWithTheirAccount("carla_the_online_customer@getnada.com","password");
-
+        SalesforceUser.signInWithTheirAccount("greenhcodedurl@de.org","test1234");
         // Then
-        carla.checkProfile();
+        SalesforceUser.checkProfile();
     }
 }

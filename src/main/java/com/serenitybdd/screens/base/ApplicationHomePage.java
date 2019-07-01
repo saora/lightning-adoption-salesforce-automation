@@ -3,6 +3,8 @@ package com.serenitybdd.examples.screens;
 import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.serenitybdd.core.webdriver.servicepools.CurrentOS;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.FindBy;
 
 public class ApplicationHomePage extends PageObject {
@@ -14,7 +16,7 @@ public class ApplicationHomePage extends PageObject {
     private static WebElementFacade GET_MOBILE_LOGIN_SCREEN;
 
     public void openAt(){
-        this.openAt("http://www.serenitybddpractice.com");
+        this.openAt("https://login.salesforce.com");
     }
 
     public void goToLoginScreen(){

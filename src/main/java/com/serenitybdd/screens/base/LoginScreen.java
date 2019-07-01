@@ -7,16 +7,17 @@ import org.openqa.selenium.support.FindBy;
 
 public class LoginScreen extends PageObject {
 
-    @FindBy(css="#login-form > section > div:nth-child(2) > div.col-md-6 > input")
+    @FindBy(id="username")
     private static WebElementFacade FILL_USERNAME;
 
-    @FindBy(css="#login-form > section > div:nth-child(3) > div.col-md-6 > div > input")
+    @FindBy(id="password")
     private static WebElementFacade FILL_PASSWORD;
 
-    @FindBy(css="#submit-login")
+    @FindBy(id="Login")
     private static WebElementFacade SIGN_IN;
 
     public LoginScreen(WebDriver driver) {
+
         super(driver);
     }
 
@@ -32,6 +33,7 @@ public class LoginScreen extends PageObject {
 
 
     private void clickSignIn() {
+
         SIGN_IN.click();
     }
 
